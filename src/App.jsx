@@ -31,7 +31,7 @@ function App() {
     setPerson(null);
 
     try {
-      const response = await fetch(`${BASE_URL}/users/getUser?id=${searchId}`);
+      const response = await fetch(`${BASE_URL}/api/users/getUser?id=${searchId}`);
 
       if (!response.ok) {
         if (response.status === 404) throw new Error("User not found");
